@@ -1,20 +1,22 @@
 <div class="container">
 	<div class="row">
 				<div class=col-sm-12>
-					<h1>
-					  <%= @article.title %>
-					</h1>
-					<p>
-					  <small class="text-muted">On <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %></small>
-					</p>
-					<p>
-					  <%= @article.text %>
-					</p>
+					<div class="p-3 m-1 rounded bg-dark">
+							<h1>
+							  <%= @article.title %>
+							</h1>
+							<p>
+							  <small class="text-muted">Posted on <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %></small>
+							</p>
+							<p>
+							  <%= @article.text %>
+							</p>
+					</div>
 
 					<br>
 
-					<div class="col-sm-12"
-							<h1>Comments</h1>
+					<div class="col-sm-12">
+						<h3>Comments:</h3>
 
 							<%= render @article.comments %>
 
@@ -23,13 +25,13 @@
 							<%= render 'comments/form' %>
 					</div>
 
-					<div class="btn btn-outline-primary">
+					<div class="btn btn-outline-secondary">
 						<%= link_to 'Edit', edit_article_path(@article), :class => "btn" %>
 					</div>
 
-					<div class="btn btn-outline-primary">
+					<button type="button" class="btn btn-outline-secondary">
 						<%= link_to 'Back', articles_path, :class => "btn"%>
-					</div>
+					</button>
 				</div
 	</div>
 

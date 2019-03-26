@@ -1,18 +1,18 @@
 
-<div class="p-3 m-1 border">
-  <p>
+<div class="p-3 m-1 rounded bg-secondary">
+  <h5>
     <strong><%= comment.commenter %></strong>
 
-  </p>
+  </h5>
 
   <p>
     <%= comment.body %>
   </p>
 
-
+<div class="small_action">
   <%= link_to 'Destroy Comment', [comment.article, comment],
         method: :delete,
         data: {confirm: 'Are you sure?' } %>
-
+</div>
 
 </div>
