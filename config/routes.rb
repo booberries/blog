@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  resources :images, only: [:create]
+
 
 end
-

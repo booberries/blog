@@ -9,3 +9,18 @@ body{
 a {
   @extend .text-warning;
 }
+
+.trix-button-group {
+
+  background: white;
+}
+
+.trix-content {
+  background: white;
+  color: black;
+
+}
+
+.comment_entry {
+  width:100%;
+}

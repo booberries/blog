@@ -9,13 +9,13 @@
 							  <small class="text-muted">Posted on <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %></small>
 							</p>
 							<p>
-							  <%= @article.text %>
+							  <%= sanitize @article.text %>
 							</p>
 					</div>
 
 					<br>
 
-					<div class="col-sm-12">
+					<div >
 						<h3>Comments:</h3>
 
 							<%= render @article.comments %>
@@ -25,13 +25,13 @@
 							<%= render 'comments/form' %>
 					</div>
 
-					<div class="btn btn-outline-secondary">
-						<%= link_to 'Edit', edit_article_path(@article), :class => "btn" %>
-					</div>
+					<div>
+						<%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-outline-secondary" %>
 
-					<button type="button" class="btn btn-outline-secondary">
-						<%= link_to 'Back', articles_path, :class => "btn"%>
-					</button>
+
+
+						<%= link_to 'Back', articles_path, :class => "btn btn-outline-secondary"%>
+
 				</div
 	</div>
 

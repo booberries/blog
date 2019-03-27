@@ -1,6 +1,6 @@
 
 <%= form_with model: @article, local: true do |form| %>
- 
+
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -14,19 +14,19 @@
       </ul>
     </div>
   <% end %>
- 
+
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
- 
+
   <p>
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.trix_editor :text %>
   </p>
- 
+
   <p>
     <%= form.submit %>
   </p>
- 
+
 <% end %>

@@ -1,12 +1,12 @@
 
-<div class="p-3 m-1 rounded bg-secondary">
+<div class="p-3 m-1 rounded bg-dark">
   <h5>
     <strong><%= comment.commenter %></strong>
-
   </h5>
+  <p><small class="text-muted"><%= comment.created_at.strftime("%B %d %Y, %l:%M%P") %></small>
 
   <p>
-    <%= comment.body %>
+    <%= simple_format(comment.body) %>
   </p>
 
 <div class="small_action">
